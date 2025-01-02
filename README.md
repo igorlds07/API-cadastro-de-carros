@@ -6,7 +6,7 @@ A API foi construída com Flask e MySQL.
 
 Base URL
 A URL base da API é:
-http://127.0.0.1:5000/
+http://127.0.0.1:5001/
 
 1. Listar Todos os Carros:
 
@@ -19,7 +19,7 @@ Não há parâmetros necessários.
 
 Exemplo de Requisição:
 
-GET http://127.0.0.1:5000/carros
+GET http://127.0.0.1:5001/carros
 
 Exemplo de Resposta (código HTTP 200 - OK):
 json
@@ -72,7 +72,7 @@ ano (inteiro): O ano de fabricação do carro.
 
 Exemplo de Requisição:
 
-POST http://127.0.0.1:5000/carros
+POST http://127.0.0.1:5001/carros
 Content-Type: application/json
 
 {
@@ -132,11 +132,11 @@ Aqui estão alguns exemplos de como você pode testar a API usando o Postman:
 
 Listar todos os carros:
 
-Abra o Postman e crie uma nova requisição GET para http://127.0.0.1:5000/carros.
+Abra o Postman e crie uma nova requisição GET para http://127.0.0.1:5001/carros.
 
 Cadastrar um novo carro:
 
-Crie uma nova requisição POST para http://127.0.0.1:5000/carros.
+Crie uma nova requisição POST para http://127.0.0.1:5001/carros.
 No corpo (tab "Body"), adicione um JSON semelhante a este:
 
 {
