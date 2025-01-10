@@ -126,6 +126,7 @@ Exemplo de Resposta:
 }
 
 3. Atualizar um Carro Existente:
+   
 Endpoint:
 PUT /carros/<int:id>
 
@@ -164,7 +165,8 @@ Exemplo de Resposta (código HTTP 404 - Not Found):
 Notas:
 Se o carro não for encontrado pelo id, a resposta será 404 - Not Found. Caso contrário, o carro será atualizado com os novos dados.
 
-Excluir um Carro Existente:
+4. Excluir um Carro Existente:
+
 Endpoint:
 DELETE /carros/<int:id>
 
