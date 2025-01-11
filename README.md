@@ -125,6 +125,75 @@ Exemplo de Resposta:
   "erro": "Erro desconhecido na conexão MySQL."
 }
 
+3. Atualizar um Carro Existente:
+   
+Endpoint:
+PUT /carros/<int:id>
+
+Descrição:
+Este endpoint permite editar os dados de um carro existente. O carro é localizado pelo id, e os dados fornecidos são atualizados.
+
+Método HTTP:
+PUT
+
+Parâmetros:
+A requisição deve conter um corpo JSON com os seguintes dados para atualização:
+
+modelo (string): O modelo do carro.
+marca (string): A marca do carro.
+ano (inteiro): O ano de fabricação do carro.
+Exemplo de Requisição:
+
+PUT http://127.0.0.1:5001/carros/1  
+Tipo de conteúdo: application/json
+
+{
+  "modelo": "Civic",
+  "marca": "Honda",
+  "ano": 2021
+}
+Exemplo de Resposta (código HTTP 200 - OK):
+
+{
+  "message": "Carro atualizado com sucesso!"
+}
+Exemplo de Resposta (código HTTP 404 - Not Found):
+
+{
+  "message": "Carro não encontrado"
+}
+Notas:
+Se o carro não for encontrado pelo id, a resposta será 404 - Not Found. Caso contrário, o carro será atualizado com os novos dados.
+
+4. Excluir um Carro Existente:
+
+Endpoint:
+DELETE /carros/<int:id>
+
+Descrição:
+Este endpoint permite excluir um carro do sistema. O carro é localizado pelo id, e se encontrado, será removido do banco de dados.
+
+Método HTTP:
+DELETE
+
+Exemplo de Requisição:
+
+DELETE http://127.0.0.1:5001/carros/1
+Exemplo de Resposta (código HTTP 200 - OK):
+
+
+{
+  "message": "Carro excluído com sucesso!"
+}
+Exemplo de Resposta (código HTTP 404 - Not Found):
+
+{
+  "message": "Carro não encontrado"
+}
+Notas:
+Se o carro não for encontrado pelo id, a resposta será 404 - Not Found. Caso contrário, o carro será excluído do banco de dados.
+
+
 Como Usar a API
 Para usar esta API, você pode interagir com ela utilizando ferramentas como Postman, cURL ou diretamente do seu código (por exemplo, usando a biblioteca requests no Python).
 
